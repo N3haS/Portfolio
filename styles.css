@@ -1,0 +1,198 @@
+/* Modern CSS with Creative Enhancements */
+
+/************* Reset Styles *************/
+h1, h2, h3, h4, p, ul, ol, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul, nav ol {
+	list-style-type: none;
+}
+
+a { text-decoration: none; }
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+* { box-sizing: border-box; }
+
+/*********** Updated Colors ***********/
+
+:root {
+	--primary: #6a93f2; /* Soft blue gradient base */
+	--secondary: #ffecd2; /* Warm pastel accent */
+	--accent: #ff6f61; /* Vibrant coral */
+	--text-default: #2d2d2d; /* Dark charcoal */
+	--background: linear-gradient(135deg, #e0f7fa, #ffecd2); /* Soft gradient */
+}
+
+/************* Page Basics *************/
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: var(--text-default);
+	background: var(--background);
+	line-height: 1.6;
+	transition: all 0.3s ease;
+}
+
+/************* Typography *************/
+
+h1, h2, h3, h4, nav {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+	margin-bottom: 0.75rem;
+}
+
+p {
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	color: #444;
+}
+
+a {
+	color: var(--accent);
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #e85d50;
+}
+
+.social {
+	font-size: 2rem;
+	color: var(--accent);
+	transition: transform 0.3s;
+}
+
+.social:hover {
+	transform: scale(1.1);
+}
+
+/************* Layout Enhancements *************/
+
+header {
+	padding: 20px;
+	background: var(--primary);
+	color: white;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+}
+
+#logo {
+	margin-right: 20px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+}
+
+#mainnav ul {
+	display: flex;
+	gap: 15px;
+}
+
+#mainnav ul li a {
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: white;
+	background: var(--accent);
+	transition: all 0.3s;
+}
+
+#mainnav ul li a:hover {
+	background: #e85d50;
+}
+
+/************* Sections *************/
+
+section {
+	padding: 40px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#work img, .additional-projects img {
+	border-radius: 10px;
+	transition: transform 0.3s;
+}
+
+#work img:hover, .additional-projects img:hover {
+	transform: scale(1.05);
+}
+
+/************* Footer *************/
+
+footer {
+	padding: 20px;
+	text-align: center;
+	background: var(--primary);
+	color: white;
+}
+
+footer p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+/************* Media Queries *************/
+
+@media only screen and (min-width: 650px) {
+	.projects, #page-template #work section {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.projects article, #page-template #work section article {
+		flex: 1 1 calc(50% - 20px);
+	}
+}
+
+@media only screen and (min-width: 1040px) {
+	.wrapper {
+		width: 1020px;
+		margin: auto;
+	}
+
+	.projects article {
+		flex: 1 1 calc(25% - 20px);
+	}
+}
